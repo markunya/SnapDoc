@@ -1,16 +1,49 @@
-# snap_doc
+# SnapDoc
 
-A new Flutter project.
+SnapDoc - это андроид приложение на Flutter, которое позволяет пользователям сканировать документы, используя камеру мобильного устройства. Приложение автоматически обнаруживает углы документа, корректирует искажения перспективы и позволяет создавать из сфотографированных страниц PDF-файлы.
 
-## Getting Started
+## Возможности
 
-This project is a starting point for a Flutter application.
+- **Автоматическое обнаружение углов**: Программа определяет границы документа на фотографии.
+- **Коррекция перспективы**: Автоматическое выравнивание и коррекция искажений перспективы для четкого сканирования.
+- **Создание PDF**: Соберите все сфотографированные страницы в один PDF-файл.
 
-A few resources to get you started if this is your first Flutter project:
+Для обработки изображений приложение использует нативную библиотеку [SnapDocLib](https://github.com/markunya/SnapDocLib), которая предоставляет функции для обнаружения углов и исправления искажений перспетивы. Скомпилированные версии библиотеки для разных архитектур находятся по пути `SnapDoc/android/app/src/main/jniLibs`.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Требования
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Flutter SDK:** 3.19.5. Установите, следуя [официальной документации](https://flutter.dev/docs/get-started/install).
+- **Dart SDK:** 3.3.3. (устанавливается вместе с Flutter).
+- **Android Studio:** 2021.2 или выше. Установите [Android Studio](https://developer.android.com/studio), используя инструкцию ниже.
+- **Дополнительные пакеты:** Убедитесь, что у вас есть интернет-соединение для загрузки пакетов.
+
+## Установка Android Studio
+
+### Шаг 1: Скачайте и установите Android Studio
+Скачайте Android Studio с [официального сайта](https://developer.android.com/studio) и следуйте инструкциям для вашей операционной системы.
+
+### Шаг 2: Настройка Android Studio
+- Запустите Android Studio и следуйте инструкциям мастера настройки.
+- Убедитесь, что плагин Flutter установлен. Если нет, установите его через `File` -> `Settings` -> `Plugins`.
+- Перейдите в `File` -> `Settings` -> `Languages & Frameworks` -> `Flutter` и укажите путь к вашей установке Flutter.
+
+## Сборка и запуск
+
+### Шаг 1: Клонируйте репозиторий
+Клонируйте репозиторий на локальную машину:
+```bash
+git clone https://github.com/markunya/SnapDoc.git
+cd SnapDoc
+```
+
+### Шаг 2: Установите зависимости
+```bash
+flutter pub get
+```
+
+### Шаг 3: Запустите приложение
+Установите эмулятор или подключите физическое Android устройство. Запустите комманду:
+```bash
+flutter run
+```
+
